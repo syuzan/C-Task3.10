@@ -10,30 +10,30 @@ namespace Task3
             Console.WriteLine("Введите простое число");
 
             int n = int.Parse(Console.ReadLine());
-            bool success = false;
+            bool success = true;
 
             int i = 2;
 
-            while (i <= n - 1)
+            while (i  <= n-1)
             {
                 if (n % i == 0)
                 {
-                    success = true;
-
+                   
+                    success = false;
+                   
                 }
                 i++;
-                break;
-
+                
             }
 
-            if (!success)
+            if (success)
              {
-                   Console.WriteLine("Число простое");
+                   Console.WriteLine($"{n} Число простое");
                 Console.ReadKey();
               }
              else
              {
-                   Console.WriteLine("Число не простое");
+                   Console.WriteLine($"{n} Число не простое");
                 Console.ReadKey();
             }
             
